@@ -1,0 +1,169 @@
+.testimonials {
+    background: linear-gradient(180deg, var(--color-light-bg) 0%, var(--color-off-white) 100%);
+    padding: var(--section-padding);
+    overflow: hidden;
+}
+
+/* ---- Carousel Container ---- */
+.testimonials__carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ---- Prev / Next Button ---- */
+.carousel__btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    background: var(--color-white);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    z-index: 5;
+    transition: background 0.25s, color 0.25s, transform 0.25s;
+}
+
+.carousel__btn:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: scale(1.1);
+}
+
+/* ---- Cards Track ---- */
+.carousel__track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+    flex: 1;
+    max-width: 1060px;
+}
+
+/* ---- Base Card (side card state — from Figma: 324×377) ---- */
+.testimonial-card {
+    background: var(--color-white);
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: 28px;
+    width: 324px;
+    min-width: 324px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.4s ease;
+}
+
+/* ---- Active (center) Card (from Figma: 364×423) ---- */
+.testimonial-card.is-active {
+    width: 364px;
+    min-width: 364px;
+    padding: 32px;
+    opacity: 1;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+}
+
+/* ---- Image (side: 269×222, center: 304×253) ---- */
+.testimonial-card__image {
+    width: 269px;
+    height: 222px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25) inset;
+    filter: grayscale(100%);
+    transition: all 0.4s ease;
+}
+
+.testimonial-card.is-active .testimonial-card__image {
+    width: 304px;
+    height: 253px;
+    filter: grayscale(0%);
+}
+
+/* Side card hover: slight lift + color peek */
+.testimonial-card:not(.is-active):hover {
+    opacity: 0.85;
+    transform: translateY(-6px);
+}
+
+.testimonial-card:not(.is-active):hover .testimonial-card__image {
+    filter: grayscale(40%);
+}
+
+/* ---- Name (side: 21px/0.65, center: 24px/1.0) ---- */
+.testimonial-card__name {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 24px;
+    opacity: 0.65;
+    color: var(--color-text);
+    margin-bottom: 4px;
+    transition: all 0.4s ease;
+}
+
+.testimonial-card.is-active .testimonial-card__name {
+    font-size: 24px;
+    opacity: 1;
+}
+
+/* ---- University (side: 13px/0.21, center: 16px/0.56) ---- */
+.testimonial-card__university {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 24px;
+    opacity: 0.21;
+    margin-bottom: 8px;
+    transition: all 0.4s ease;
+}
+
+.testimonial-card.is-active .testimonial-card__university {
+    font-size: 16px;
+    opacity: 0.56;
+}
+
+/* ---- Award (side: 15px/0.65, center: 18px/1.0) ---- */
+.testimonial-card__award {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    opacity: 0.65;
+    transition: all 0.4s ease;
+}
+
+.testimonial-card.is-active .testimonial-card__award {
+    font-size: 18px;
+    opacity: 1;
+}
+
+/* ---- Dots ---- */
+.carousel__dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.carousel__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(19, 36, 64, 0.2);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.carousel__dot--active {
+    background: var(--color-primary);
+    transform: scale(1.3);
+}

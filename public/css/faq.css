@@ -1,0 +1,132 @@
+/* ============================================================
+   faq.css — Frequently Asked Questions section
+   ============================================================ */
+
+.faq {
+    background: linear-gradient(180deg, var(--color-blue-light) 0%, var(--color-off-white) 100%);
+    padding: var(--section-padding);
+}
+
+/* --- Two-column layout --- */
+.faq__wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* Left column: heading + CTA */
+.faq__left {
+    flex: 0 0 380px;
+}
+
+.faq__heading {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.faq__heading .accent {
+    color: var(--color-accent);
+}
+
+.faq__heading .dark {
+    color: var(--color-primary);
+}
+
+.faq__description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: var(--color-text);
+}
+
+/* Right column: accordion list */
+.faq__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* --- Accordion Item --- */
+.faq-item {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--color-border-faq);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 16px rgba(74, 126, 213, 0.12);
+}
+
+.faq-item__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    cursor: pointer;
+    gap: 16px;
+}
+
+.faq-item__question {
+    font-size: 18px;
+    font-weight: 600;
+    flex: 1;
+}
+
+/* Toggle circle button */
+.faq-item__toggle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.faq-item__toggle svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--color-primary);
+    /* default: arrow biru (primary) */
+    transition: transform 0.3s, fill 0.3s;
+}
+
+/* Active state: INVERT — background biru, arrow oranye */
+.faq-item--active .faq-item__toggle {
+    background: var(--color-primary);
+    /* biru */
+}
+
+.faq-item--active .faq-item__toggle svg {
+    fill: var(--color-accent);
+    /* oranye */
+    transform: rotate(180deg);
+}
+
+/* Smooth expand/collapse */
+.faq-item__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 24px;
+}
+
+.faq-item--active .faq-item__answer {
+    max-height: 300px;
+    padding: 0 24px 20px;
+}
+
+.faq-item__answer p {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--color-text);
+}

@@ -1,0 +1,123 @@
+/* ============================================================
+   base.css — Design Tokens, Reset, Utilities & Buttons
+   ============================================================ */
+
+/* --- Custom Properties / Design Tokens --- */
+:root {
+    --color-primary: #132440;
+    --color-accent: #F2BC45;
+    --color-white: #ffffff;
+    --color-off-white: #FCFCFF;
+    --color-light-bg: #F6F5FB;
+    --color-blue-light: #F0F5FF;
+    --color-green: #07DC00;
+    --color-green-bg: #E2FBEC;
+    --color-green-text: #467457;
+    --color-blue-icon: #4A7ED5;
+    --color-blue-bg: #E2F4FB;
+    --color-yellow-bg: #FBF8E2;
+    --color-text: #000000;
+    --color-text-muted: #7F7F7F;
+    --color-red-badge: #FFD1D1;
+    --color-red-text: #B23030;
+    --color-border-faq: rgba(74, 126, 213, 0.21);
+
+    --font-primary: 'Poppins', sans-serif;
+    --font-brand: 'Inter', sans-serif;
+
+    --max-width: 1280px;
+    --section-padding: 80px 80px;
+    --border-radius: 16px;
+    --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background: var(--color-white);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Utilities --- */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-title .accent {
+    color: var(--color-accent);
+}
+
+.section-title .dark {
+    color: var(--color-primary);
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--font-primary);
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-accent);
+    border: 3px solid var(--color-accent);
+}
+
+.btn-accent-dark {
+    background: var(--color-accent);
+    color: var(--color-primary);
+}

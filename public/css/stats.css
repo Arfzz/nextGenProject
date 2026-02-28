@@ -1,0 +1,55 @@
+/* ============================================================
+   stats.css — Porto Singkat / Stats section
+   ============================================================ */
+
+.stats {
+    background: var(--color-light-bg);
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative curved top inherited from Hero */
+.stats::before {
+    content: '';
+    position: absolute;
+    top: -150px;
+    left: -5%;
+    width: 110%;
+    height: 200px;
+    background: var(--color-primary);
+    border-radius: 0 0 50% 50%;
+    z-index: 1;
+}
+
+.stats__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.stats__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.stats__number {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.stats__label {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-text);
+    max-width: 200px;
+    line-height: 1.3;
+}
