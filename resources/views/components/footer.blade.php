@@ -28,11 +28,10 @@
             <div class="footer__socials">
                 <a href="#" aria-label="WhatsApp"><img src="{{ asset('images/ic_baseline-whatsapp.png') }}"
                         alt="WhatsApp"></a>
-                <a href="#" aria-label="Instagram"><img src="{{ asset('images/ig.png') }}" alt="Instagram"></a>
+                <a href="#" aria-label="Instagram"><img src="{{ asset('images/igbaru.png') }}" alt="Instagram"></a>
                 <a href="#" aria-label="TikTok"><img src="{{ asset('images/ic_baseline-tiktok.png') }}"
                         alt="TikTok"></a>
-                <a href="#" aria-label="Youtube"><img src="{{ asset('images/ytic.png') }}" alt="Youtube"></a>
-                <a href="#" aria-label="Facebook"><img src="{{ asset('images/facebook.png') }}" alt="Facebook"></a>
+                <a href="#" aria-label="Twitter"><img src="{{ asset('images/twitter.png') }}" alt="Twitter"></a>
             </div>
         </div>
 

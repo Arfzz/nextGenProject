@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/admin.css') }}">
 </head>
 
 <body>
@@ -52,6 +52,17 @@
                         <line x1="12" y1="17" x2="12.01" y2="17" />
                     </svg>
                     FAQ
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('admin.orders.index') }}"
+                    class="sidebar__link {{ request()->routeIs('admin.orders.*') ? 'sidebar__link--active' : '' }}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    Orders
                 </a>
             </li>
         </ul>

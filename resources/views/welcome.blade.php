@@ -19,14 +19,14 @@
     <link rel="stylesheet" href="{{ asset('css/base.css') }}">
 
     {{-- Component styles --}}
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/stats.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/testimonials.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/weapons.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/pricing.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/faq.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components/hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components/stats.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components/testimonials.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components/weapons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components/pricing.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components/faq.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components/footer.css') }}">
 
     {{-- Responsive breakpoints (must load last to override) --}}
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">

@@ -13,7 +13,7 @@
 .stats::before {
     content: '';
     position: absolute;
-    top: -150px;
+    top: -120px;
     left: -5%;
     width: 110%;
     height: 200px;
@@ -24,6 +24,7 @@
 
 .stats__row {
     display: flex;
+    padding-top: 64px;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;

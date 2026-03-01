@@ -1,10 +1,9 @@
 /* ============================================================
    footer.css — Footer section
    ============================================================ */
-
 .footer {
     background: var(--color-primary);
-    padding: 80px 80px 40px;
+    padding: 100px 80px 40px;
     position: relative;
     overflow: hidden;
 }
@@ -13,10 +12,11 @@
 .footer::before {
     content: '';
     position: absolute;
-    top: -160px;
+    top: -120px;
     left: -5%;
     width: 110%;
     height: 200px;
+    
     background: var(--color-off-white);
     border-radius: 0 0 50% 50%;
 }
@@ -28,12 +28,13 @@
     align-items: flex-start;
     position: relative;
     z-index: 2;
-    padding-top: 40px;
+    margin-top: 24px; /* jarak dari lengkungan */
 }
 
 /* Brand / logo column */
 .footer__brand {
     flex: 0 0 280px;
+   
 }
 
 .footer__brand img {
