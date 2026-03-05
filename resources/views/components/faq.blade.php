@@ -12,7 +12,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Ada
                 pertanyaan lain?
             </p>
-            <a href="#" class="btn btn-accent-dark">Pelajari Strateginya</a>
+            <a href="#" class="btn btn-accent-dark">Tanya Lebih Lanjut</a>
         </div>
 
         {{-- Right: Accordion --}}
